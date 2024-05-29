@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box
+    {
+        height:100px;
+        width:100px;
+        background-color: blue;
+        margin:20px;
+    }
+    .box:hover{
+        background-color: aqua;
+    }
+</style>
+<body>
+    <div class="box" id="box">
+
+    </div>
+    <h1 id="hoverstatus">Hover over the box</h1>
+    <script>
+        let box=document.getElementById('box');
+        let status=document.getElementById('hoverstatus');
+     
+        box.addEventListener('mouseover',function()
+    {
+        status.innerText='Mouse over  the box';
+    });
+    box.addEventListener('mouseout',function()
+    {
+        status.innerText='Mouse out  the box';
+    });
+    </script>
+</body>
+</html>

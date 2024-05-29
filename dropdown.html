@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Change Event</title>
+</head>
+<body>
+   <label>Select a color</label>
+   <select id="selectcolor">
+    <option value="red">Red</option>
+    <option value="orange">Orange</option>
+    <option value="blue">Blue</option>
+   </select>
+   <div id="box" style="height:100px; width:100px; background-color: white; margin: 20px;  " ></div>
+<script>
+    document.getElementById('selectcolor').addEventListener('change',function()
+{
+    let selectcolor=this.value;
+    document.getElementById('box').style.backgroundColor=selectcolor;
+})
+</script>
+</body>
+</html>
